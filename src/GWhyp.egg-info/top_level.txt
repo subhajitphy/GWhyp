@@ -1,8 +1,0 @@
-antenna_pattern
-eval_max
-getx
-gw_functions
-gw_hyp
-gw_hyp_valid
-gwhyp_v2
-hypmik3pn
