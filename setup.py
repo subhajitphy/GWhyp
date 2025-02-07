@@ -9,5 +9,5 @@ setup(
     url='https://github.com/subhajitphy/GWhyp',
     python_requires=">=3.8",
     package_dir={"": "./src/"},
-    py_modules=["gw_hyp_valid","gw_hyp","gwhyp_v2","hypmik3pn","gw_functions","antenna_pattern","getx","eval_max"],
+    py_modules=["gw_hyp_valid","gw_hyp","gwhyp_v2","hypmik3pn","gw_functions","antenna_pattern","getx","eval_max","constants"],
 )
