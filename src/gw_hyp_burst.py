@@ -3,7 +3,7 @@ import numpy as np
 from numpy import sin, cos, cosh, sqrt, pi, arctan, tanh, sinh
 from gw_functions import phiv, omg, get_M
 from hypmik3pn import get_u_hat
-from scipy.integrate import cumtrapz
+from scipy.integrate import cumulative_trapezoid
 import antenna_pattern as ap
 
     
@@ -70,10 +70,11 @@ def cal_sp_sx(M,q,et,n,tarr,D_GW,inc):
     
     η=1/(1+q)**2
     h=get_hyp_waveform(M, q, et, n,tarr, inc, D_GW)
-    s_arr = np.array([cumtrapz(h[i], x = tarr, initial=0) for i in range(len(h))])
+    s_arr = np.array([cumulative_trapezoid(h[i],tarr, initial=0) for i in range(len(h))])
     
     
     return s_arr
+
 
 
 
