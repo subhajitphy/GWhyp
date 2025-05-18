@@ -1,15 +1,10 @@
-from numpy import pi
 
-G=6.67408*1e-11
-Ms=1.898*1e+30
-c=3e8
+import astropy.constants as ac
 
-tsun=4.691631051851851e-06
-dsun=1407.48931
-yr=365.25*24*3600
-
-pc=3.086e+16
-
-####################
-
-
+#Constants to be used later
+GMsun = ac.GM_sun.value                                  #G*(Solar Mass)
+c = ac.c.value                                           #Speed of light in vacuum
+dsun = GMsun/(c**2)                                      #Natural length scale
+tsun = GMsun/(c**3)                                      #Natural time scale
+pc = ac.pc.value                                         #One parsec
+yr = (365.25)*(24)*(60)*(60)        
